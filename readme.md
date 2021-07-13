@@ -1,17 +1,39 @@
-##Todos
-> After creation of app
-* Intimate the project about this new app by writing in settings of installed apps.
-* after creating database tododb in postgres from user named stella connect that in setting.
-* run python manage.py migrate
+## Todos
 
-- Then you can see the default tables in tododb database with "\d" in tododb commandline.
->In Models.py
-* Create a table name Todo as a class.
-* A column named details for content so, textfield from models class is taken. 
-* make migrations(" python manage.py  makemigrations todo ") then a file is created in migrations folder.
-* " python manage.py sqlmigrate todo 0001 " and then " python manage.py migrate "
-* In commdadline postgres you can see the todo table with id(default),details columns.
->Now route the urls and modify views in app
-* to test localhosturl+"url in project'z folder"+"url in app folder"
+### Requirements:
+* Python Environment: python3 -m venv <environment_name>
+* Django installation : pip3 install django
+* POSTGRES : https://phoenixnap.com/kb/how-to-install-postgresql-on-ubuntu
+* psycog adapter :  pip install django psycopg2
 
- [source code] (https://www.genome.gov/)
+
+> Run: python manage.py runserver
+
+I've worked with POSTGRES through terminal which is recommended to learn commmands and alternatively can use pgadmin.
+
+- <u>postgres integration:</u>
+> DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'tododb',
+        'USER': 'stella',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'POST': '',
+    }
+}
+
+created using the follwing commands:
+In psql prompt:
+* User Creation 
+> CREATE DATABASE tododb;
+CREATE USER stella WITH PASSWORD ‘1234‘;
+ALTER ROLE stella SET client_encoding TO ‘utf8’;
+ALTER ROLE stella SET default_transaction_isolation TO ‘read committed’;
+ALTER ROLE stella SET timezone TO ‘UTC’;
+GRANT ALL PRIVILEGES ON DATABASE tododb TO stella;
+
+
+
+
+[source code] (https://github.com/sravanthi657/Todoist)
