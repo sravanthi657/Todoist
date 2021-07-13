@@ -9,7 +9,7 @@
 
 > Run: python manage.py runserver
 
-I've worked with POSTGRES through terminal which is recommended to learn commmands and alternatively can use pgadmin.
+To check the creation and  updation of table lively I've worked with POSTGRES through terminal which is recommended to learn commmands and alternatively can use pgadmin.
 
 - <u>postgres integration:</u>
 > DATABASES = {
@@ -33,6 +33,8 @@ ALTER ROLE stella SET default_transaction_isolation TO ‘read committed’;
 ALTER ROLE stella SET timezone TO ‘UTC’;
 GRANT ALL PRIVILEGES ON DATABASE tododb TO stella;
 
+ To check the values in db:  psql -u stella -h localhost tododb;
+            SELECT * FROM todo_todo;
 
 
 
