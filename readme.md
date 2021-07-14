@@ -7,7 +7,10 @@
 * psycog adapter : ```  pip install django psycopg2 ```
 
 
-> Run: python manage.py runserver
+#### Run: 
+>  activate the pyenvironment 
+> ``` python manage.py runserver ```
+
 Open the mentioned link then go to localhost/todo/list
 
 To check the creation and  updation of table lively I've worked with POSTGRES through terminal which is recommended to learn commmands and alternatively can use pgadmin.
